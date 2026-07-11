@@ -18,6 +18,10 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
+app.get("/api/payments/success", (req, res) => {
+  res.send({ message: "Payment completed! You can close this tab and check your order status in the app." });
+});
+
 // routes
 app.use("/api", routes)
 
