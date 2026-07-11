@@ -40,7 +40,11 @@ const auth = async (
       throw new AppError(403, "Your account has been suspended.");
     }
 
-    (req as any).user = decoded;
+    (req as any).user = {
+      id: user.id,
+      email: user.email,
+      role: user.role,
+    };
 
     next();
   } catch (error) {
