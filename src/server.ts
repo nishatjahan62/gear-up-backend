@@ -1,13 +1,13 @@
 import app from "./app.js";
-// import config from "./config/index.js";
-import {prisma} from "./lib/prisma.js";
+import config from "./config/index";
+import {prisma} from "./lib/prisma";
 
 async function main() {
   await prisma.$connect();
   console.log("✅ Database connected");
 
-  app.listen(5000, () => {
-    console.log(`🚀 GearUp server running on port ${5000}`);
+  app.listen(config.port, () => {
+    console.log(`🚀 GearUp server running on port ${config.port}`);
   });
 }
 
