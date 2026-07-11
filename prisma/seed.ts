@@ -15,20 +15,14 @@ async function main() {
     },
   });
 
-  const category = await prisma.category.upsert({
-    where: { name: "Camping" },
-    update: {},
-    create: { name: "Camping" },
-  });
-
-  console.log("✅ Seed completed.");
+  console.log(" Seed completed.");
   console.log("Admin Email:", admin.email);
   console.log("Admin Password: admin01");
 }
 
 main()
   .catch((e) => {
-    console.error("❌ Seed failed:", e);
+    console.error("Seed failed:", e);
     process.exit(1);
   })
   .finally(async () => {
