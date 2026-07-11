@@ -1,6 +1,6 @@
 import app from "./app.js";
-import config from "./config/index";
-import {prisma} from "./lib/prisma";
+import config from "./config/index.js";
+import { prisma } from "./lib/prisma.js";
 
 async function main() {
   await prisma.$connect();
@@ -11,7 +11,10 @@ async function main() {
   });
 }
 
-main().catch((err) => {
+main().catch(async (err) => {
   console.error("❌ Failed to start server:", err);
+
+  await prisma.$disconnect();
+
   process.exit(1);
 });
