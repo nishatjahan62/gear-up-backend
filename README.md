@@ -11,8 +11,7 @@ A backend REST API for a sports and outdoor equipment rental platform. Customers
 | Item | Link |
 |---|---|
 | **Live API** | https://gear-up-backend-5b6a.onrender.com |
-| **API Documentation (Postman)** | *paste your documenter.getpostman.com link here* |
-| **Demo Video** | *paste your video link here* |
+| **API Documentation (Postman)** | *https://documenter.getpostman.com/view/52459423/2sBY4LS2iJ* |
 
 > ⚠️ Render's free tier spins down after inactivity. The first request after idle may take 30-60 seconds to respond — this is expected.
 
